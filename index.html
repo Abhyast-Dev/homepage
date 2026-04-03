@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABLE™ Ecosystem | Autonomy Building Learning Environment</title>
+    <style>
+        :root {
+            --yellow: #fde32d;
+            --pink: #ee4977;
+            --navy: #272b6a;
+            --aqua: #4bc2c4;
+            --white: #ffffff;
+            --black: #000000;
+            --navy-light: #343a8a;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header & Logo --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo-img {
+            height: 80px; /* Adjust based on your Logo.png aspect ratio */
+            margin-bottom: 15px;
+        }
+
+        .brand-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0;
+            color: var(--white);
+        }
+
+        .brand-title span { color: var(--aqua); }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--yellow);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* --- Hub and Spoke (The Ecosystem) --- */
+        .ecosystem-container {
+            position: relative;
+            height: 650px;
+            max-width: 1100px;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 1. PULSING GLOW ANIMATION */
+        @keyframes hubGlow {
+            0% { box-shadow: 0 0 40px rgba(75, 194, 196, 0.6); }
+            50% { box-shadow: 0 0 80px rgba(75, 194, 196, 0.9); }
+            100% { box-shadow: 0 0 40px rgba(75, 194, 196, 0.6); }
+        }
+
+        .central-hub {
+            width: 200px;
+            height: 200px;
+            background: var(--aqua);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border: 10px solid var(--navy);
+            text-align: center;
+            padding: 20px;
+            
+            /* 2. APPLY THE GLOW ANIMATION */
+            animation: hubGlow 4s infinite ease-in-out;
+        }
+
+        .central-hub h3 { margin: 0; font-size: 2rem; line-height: 1; }
+        .central-hub p { margin: 5px 0 0; font-size: 0.7rem; font-weight: 800; line-height: 1.2; }
+
+        .product-node {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 20px;
+            width: 260px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 5;
+        }
+
+        .product-node:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--pink);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(238, 73, 119, 0.25);
+        }
+
+        .product-node h4 { margin: 10px 0 8px; color: var(--aqua); font-size: 1.2rem; }
+        .product-node p { margin: 0; font-size: 0.9rem; opacity: 0.8; line-height: 1.4; }
+
+        /* Positions */
+        .node-tl { top: 40px; left: 40px; }
+        .node-tr { top: 40px; right: 40px; }
+        .node-bl { bottom: 40px; left: 40px; }
+        .node-br { bottom: 40px; right: 40px; }
+
+        /* --- Framework Section --- */
+        .framework-section {
+            background: var(--white);
+            color: var(--navy);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .framework-section h2 { font-size: 2.5rem; margin-bottom: 10px; color: var(--navy); }
+        .framework-section .sub-h { margin-bottom: 50px; color: #666; font-size: 1.1rem; }
+
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .step-box {
+            background: var(--navy);
+            color: var(--yellow);
+            padding: 25px 15px;
+            border-radius: 15px;
+            flex: 1;
+            min-width: 130px;
+            font-weight: bold;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .step-letter { color: var(--aqua); font-size: 1.8rem; display: block; margin-bottom: 5px; }
+
+        .step-box:hover {
+            background: var(--pink);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* --- Enablement / Analytics Section --- */
+        .enablement-cta {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+            border-top: 6px solid var(--yellow);
+        }
+
+        .enablement-cta h2 { font-size: 2.8rem; margin-bottom: 20px; color: var(--yellow); }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            padding: 30px;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--aqua);
+            text-align: left;
+        }
+
+        .feature-card h4 { color: var(--aqua); font-size: 1.3rem; margin-top: 0; }
+
+        .btn-demo {
+            background: var(--yellow);
+            color: var(--navy);
+            padding: 20px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            display: inline-block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-demo:hover {
+            transform: translateY(-3px);
+            background: var(--white);
+            box-shadow: 0 15px 30px rgba(253, 227, 45, 0.3);
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 20px;
+            background: #1a1d47;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-links { margin-bottom: 30px; }
+        .footer-links a {
+            color: var(--aqua);
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .ecosystem-container { height: auto; flex-direction: column; padding: 40px 20px; }
+            .product-node { position: static; width: 100%; margin-bottom: 15px; }
+            .central-hub { margin: 30px 0; order: -1; }
+            .hero h2 { font-size: 2.2rem; }
+        }
+
+                /* Modal Background Overlay */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(39, 43, 106, 0.8); /* Navy with transparency */
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* Modal Box */
+        .modal-content {
+            background: var(--white);
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 24px;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-top: 10px solid var(--pink);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px; right: 25px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            transition: 0.3s;
+        }
+        .close-btn:hover { color: var(--pink); }
+
+        /* Form Elements */
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; font-weight: bold; color: var(--navy); font-size: 0.85rem; margin-bottom: 5px; }
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.3s;
+        }
+        .input-group input:focus { border-color: var(--aqua); }
+
+        .btn-submit {
+            width: 100%;
+            padding: 15px;
+            background: var(--navy);
+            color: var(--yellow);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-submit:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+
+
+
+
+
+    </style>
+    <link rel="icon" type="image/png" href="Logo.png">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="Logo.png" alt="Abhyast Logo" class="logo-img">
+        </div>
+        <h1 class="brand-title">Abhyast <span>|</span> ABLE™</h1>
+        <p class="tagline">Autonomy Building Learning Environment</p>
+    </header>
+
+    <section class="hero">
+        <h2>Enablement through <span>Self-Determined</span> Learning.</h2>
+        <p>We provide the environment; you build the autonomy. ABLE™ synchronizes cognitive tools to transform passive students into self-regulated masters of their own growth.</p>
+    </section>
+
+    <div class="ecosystem-container">
+        <div class="central-hub">
+            <h3>ABLE™</h3>
+            <p>AUTONOMY HUB</p>
+        </div>
+
+        <a href="https://learntocode.abhyast.in/" target="_blank" class="product-node node-tl">
+            <h4>💻 LearnToCode</h4>
+            <p>Develop logic and Python mastery through autonomous problem-solving.</p>
+        </a>
+
+        <a href="https://able.abhyast.in/" target="_blank" class="product-node node-tr">
+            <h4>📅 ABLE Calendar</h4>
+            <p>Self-manage time and study goals with metacognitive strategic planning.</p>
+        </a>
+
+        <a href="https://stream-selection.abhyast.in/" target="_blank" class="product-node node-bl">
+            <h4>🚀 Stream Explorer</h4>
+            <p>Determine your own academic future based on aptitude-driven insights.</p>
+        </a>
+
+        <a href="http://mathable.abhyast.in/" target="_blank" class="product-node node-br">
+            <h4>📐 Mathable</h4>
+            <p>Visualize abstract math to build deep, conceptual self-reliance.</p>
+        </a>
+    </div>
+
+    <section class="framework-section">
+        <h2>The TAKECARE™ Engine</h2>
+        <p class="sub-h">An 8-step framework designed to facilitate self-determined mastery.</p>
+        <div class="steps-container">
+            <div class="step-box"><span class="step-letter">T</span>THINK</div>
+            <div class="step-box"><span class="step-letter">A</span>ASK</div>
+            <div class="step-box"><span class="step-letter">K</span>KNOW</div>
+            <div class="step-box"><span class="step-letter">E</span>ENGAGE</div>
+            <div class="step-box"><span class="step-letter">C</span>CONFIRM</div>
+            <div class="step-box"><span class="step-letter">A</span>ASSESS</div>
+            <div class="step-box"><span class="step-letter">R</span>REFLECT</div>
+            <div class="step-box"><span class="step-letter">E</span>EVALUATE</div>
+        </div>
+    </section>
+
+    <section class="enablement-cta">
+        <h2>Institutional Enablement</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">
+            We empower schools and parents with the analytics required to support student autonomy without micro-management.
+        </p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Self-Driven Analytics</h4>
+                <p>Observe how students navigate challenges and build independent learning habits over time.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Friction Identification</h4>
+                <p>Detect where autonomy stalls to provide precise, non-intrusive support where it's needed most.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Transparency Hub</h4>
+                <p>Unified dashboards for parents and educators to track the transition from learning to mastery.</p>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" onclick="openModal()" class="btn-demo">Request Institutional Demo</a>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="mailto:contact@abhyast.in">📧 contact@abhyast.in</a>
+            <a href="https://wa.me/919910686080" target="_blank">💬 WhatsApp Support</a>
+        </div>
+        <p style="opacity: 0.7; font-size: 0.85rem;">&copy; 2026 Abhyast Private Limited. ABLE™ (Autonomy Building Learning Environment) and TAKECARE™ are registered cognitive frameworks.</p>
+    </footer>
+
+    <div id="demoModal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div id="modal-form-side">
+            <h2 style="color:var(--navy); margin-top:0;">Request Institutional Demo</h2>
+            <p style="color:#555; font-size:0.9rem;">Start the journey toward self-determined learning and diagnostic excellence in your school.</p>
+            
+            <form id="demoForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="node-name" name="name" required placeholder="e.g. Dr. Aruna Singh">
+                </div>
+                <div class="input-group">
+                    <label>School/Institution Name</label>
+                    <input type="text" id="node-school" name="school" required placeholder="e.g. Abhyast Global School">
+                </div>
+                <div class="input-group">
+                    <label>Official Email</label>
+                    <input type="email" id="node-email" name="email" required placeholder="e.g. principal@school.in">
+                </div>
+                <div class="input-group">
+                    <label>Primary Area of Interest</label>
+                    <select id="node-focus" name="focus">
+                        <option value="Full Ecosystem">Full ABLE™ Ecosystem</option>
+                        <option value="Mathable">Mathable (Math Visualization)</option>
+                        <option value="LearnToCode">LearnToCode (Python Logic)</option>
+                        <option value="Stream Explorer">Stream Selection Analytics</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Initialize Enablement</button>
+            </form>
+        </div>
+
+        <div id="modal-success-side" style="display:none; text-align:center; padding:40px 20px;">
+            <div style="font-size:4rem;">✅</div>
+            <h2 style="color:var(--navy);">Request Initialized!</h2>
+            <p style="color:#555;">Our Enablement Lead will reach out to schedule your diagnostic walkthrough within 24 hours.</p>
+            <button onclick="closeModal()" class="btn-submit" style="background:var(--aqua);">Return to Ecosystem</button>
+        </div>
+    </div>
+</div>
+
+<script>
+        function openModal() {
+            document.getElementById('demoModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('demoModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+            document.getElementById('modal-form-side').style.display = 'block';
+            document.getElementById('modal-success-side').style.display = 'none';
+            document.getElementById('demoForm').reset();
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('demoModal')) { closeModal(); }
+        }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwEWDr-dzFmkyPNlXCOt3L8g2s5nGt-zAF2l_WoVaf9qk62-mNry5tKET3szlaubhXOXQ/exec'
+
+const form = document.getElementById('demoForm');
+
+   
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('.btn-submit');
+    submitBtn.innerText = "Initializing...";
+    submitBtn.disabled = true;
+
+    // Use fetch with no-cors to bypass browser blocks
+    fetch(scriptURL, { 
+        method: 'POST', 
+        mode: 'no-cors', 
+        body: new FormData(form) 
+    })
+    .then(() => {
+        // assumption of success because no-cors doesn't return data
+        document.getElementById('modal-form-side').style.display = 'none';
+        document.getElementById('modal-success-side').style.display = 'block';
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("Submission failed. Check your connection.");
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Initialize Enablement";
+    });
+});
+    </script>
+</body>
+</html>
