@@ -161,6 +161,18 @@
     transition: 0.3s;
 }
 
+        /* New Bottom-Center Position for Mind Map */
+.node-bc { 
+    bottom: -20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+/* Ensure the hover effect works with the transform */
+.node-bc:hover {
+    transform: translateX(-50%) translateY(-10px) scale(1.02);
+}
+
 .node-aqua:hover {
     background: rgba(75, 194, 196, 0.15);
     transform: translateY(-3px);
@@ -399,10 +411,10 @@
             <p>Visualize abstract math to build deep, conceptual self-reliance.</p>
         </a>
 
-        <a href="https://mindmap.abhyast.in/" target="_blank" class="product-node node-aqua">
-        <h4>🧠 ABLE™ Mind Map Lab</h4>
+        <a href="https://mindmap.abhyast.in/" target="_blank" class="product-node node-bc node-aqua">
+         <h4>🧠 ABLE™ Mind Map Lab</h4>
         <p>Map your thoughts, connect concepts, and build deeper understanding through visual learning.</p>
-</a>
+        </a>
     
     
     </div>
