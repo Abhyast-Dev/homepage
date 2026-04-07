@@ -161,25 +161,47 @@
     transition: 0.3s;
 }
 
-        /* New Bottom-Center Position for Mind Map */
-.node-bc { 
-    bottom: -20px; 
+/* --- Updated Ecosystem Positions --- */
+
+/* 1. Top Center (LearnToCode) */
+.node-tc { 
+    top: 0; 
     left: 50%; 
     transform: translateX(-50%); 
 }
 
-/* Ensure the hover effect works with the transform */
-.node-bc:hover {
-    transform: translateX(-50%) translateY(-10px) scale(1.02);
+/* 2. Top Right (ABLE Calendar) */
+.node-tr-mid { 
+    top: 120px; 
+    right: 0; 
 }
 
-.node-aqua:hover {
-    background: rgba(75, 194, 196, 0.15);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+/* 3. Bottom Right (Mathable) */
+.node-br-mid { 
+    bottom: 80px; 
+    right: 20px; 
 }
 
-        /* Positions */
+/* 4. Bottom Left (Stream Explorer) */
+.node-bl-mid { 
+    bottom: 80px; 
+    left: 20px; 
+}
+
+/* 5. Top Left (Mind Map Lab) */
+.node-tl-mid { 
+    top: 120px; 
+    left: 0; 
+}
+
+/* Hover Adjustment for Centered Nodes */
+.node-tc:hover { transform: translateX(-50%) translateY(-10px) scale(1.02); }
+
+/* Keep your existing .node-aqua and other styles */
+.node-aqua {
+    border-left: 5px solid var(--aqua);
+    background: rgba(75, 194, 196, 0.05);
+}        /* Positions */
         .node-tl { top: 40px; left: 40px; }
         .node-tr { top: 40px; right: 40px; }
         .node-bl { bottom: 40px; left: 40px; }
@@ -385,40 +407,37 @@
         <p>We provide the environment; you build the autonomy. ABLE™ synchronizes cognitive tools to transform passive students into self-regulated masters of their own growth.</p>
     </section>
 
-    <div class="ecosystem-container">
-        <div class="central-hub">
-            <h3>ABLE™</h3>
-            <p>AUTONOMY HUB</p>
-        </div>
-
-        <a href="https://learntocode.abhyast.in/" target="_blank" class="product-node node-tl">
-            <h4>💻 LearnToCode</h4>
-            <p>Develop logic and Python mastery through autonomous problem-solving.</p>
-        </a>
-
-        <a href="https://able.abhyast.in/" target="_blank" class="product-node node-tr">
-            <h4>📅 ABLE™ Calendar</h4>
-            <p>Self-manage time and study goals with metacognitive strategic planning.</p>
-        </a>
-
-        <a href="https://stream-selection.abhyast.in/" target="_blank" class="product-node node-bl">
-            <h4>🚀 Stream Explorer</h4>
-            <p>Determine your own academic future based on aptitude-driven insights.</p>
-        </a>
-
-        <a href="http://mathable.abhyast.in/" target="_blank" class="product-node node-br">
-            <h4>📐 Mathable</h4>
-            <p>Visualize abstract math to build deep, conceptual self-reliance.</p>
-        </a>
-
-        <a href="https://mindmap.abhyast.in/" target="_blank" class="product-node node-bc node-aqua">
-         <h4>🧠 ABLE™ Mind Map Lab</h4>
-        <p>Map your thoughts, connect concepts, and build deeper understanding through visual learning.</p>
-        </a>
-    
-    
+    <<div class="ecosystem-container">
+    <div class="central-hub">
+        <h3>ABLE™</h3>
+        <p>AUTONOMY HUB</p>
     </div>
 
+    <a href="https://learntocode.abhyast.in/" target="_blank" class="product-node node-tc">
+        <h4>💻 LearnToCode</h4>
+        <p>Develop logic and Python mastery through autonomous problem-solving.</p>
+    </a>
+
+    <a href="https://able.abhyast.in/" target="_blank" class="product-node node-tr-mid">
+        <h4>📅 ABLE™ Calendar</h4>
+        <p>Self-manage time and study goals with metacognitive planning.</p>
+    </a>
+
+    <a href="http://mathable.abhyast.in/" target="_blank" class="product-node node-br-mid">
+        <h4>📐 Mathable</h4>
+        <p>Visualize abstract math to build deep, conceptual self-reliance.</p>
+    </a>
+
+    <a href="https://stream-selection.abhyast.in/" target="_blank" class="product-node node-bl-mid">
+        <h4>🚀 Stream Explorer</h4>
+        <p>Determine your academic future based on aptitude-driven insights.</p>
+    </a>
+
+    <a href="https://mindmap.abhyast.in/" target="_blank" class="product-node node-tl-mid node-aqua">
+        <h4>🧠 Mind Map Lab</h4>
+        <p>Map thoughts and build deeper understanding through visual cognition.</p>
+    </a>
+</div>
     <section class="framework-section">
         <h2>The TAKECARE™ Engine</h2>
         <p class="sub-h">An 8-step framework designed to facilitate self-determined mastery.</p>
