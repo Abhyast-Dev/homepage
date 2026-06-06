@@ -1,0 +1,16 @@
+{
+  "name": "Abhyast ABLE™ Ecosystem",
+  "short_name": "Abhyast ABLE™",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#272b6a",
+  "theme_color": "#272b6a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
