@@ -6,3 +6,4 @@ defaults:
     values:
       custom_headers:
         content-type: "application/json"
+
