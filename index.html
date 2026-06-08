@@ -99,6 +99,22 @@
             padding: 100px 0 60px 0;
             position: relative;
         }
+        .hero-subtext {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.85;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+        .hero-subtext span {
+            color: var(--pink);
+            font-weight: 600;
+        }
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
 
         .hero::before {
             content: '';
@@ -504,9 +520,10 @@
         <section class="hero">
             <div class="container">
                 <h2>Enablement through <span>Self-Determined</span> Learning.</h2>
-                <p>True success depends on the ability to plan, learn independently, reflect, and continuously improve. 
-                ABLE™ (Autonomy Building Learning Environment) synchronizes human guidance with metacognitive tools 
-                to transform uncertainty into clarity and hesitation into confidence.
+                <p class="hero-subtext">
+                        True success depends on the ability to plan, learn independently, reflect, and continuously improve. 
+                        ABLE™ (Autonomy Building Learning Environment) synchronizes human guidance with metacognitive tools 
+                        to transform uncertainty into clarity and hesitation into confidence.
                 </p>
             </div>
         </section>
@@ -576,44 +593,128 @@
         </section>
 
         <section class="framework-section">
-            <div class="container">
-                <h2>The TAKECARE™ Engine</h2>
-                <p class="sub-h">An 8-step framework designed to facilitate self-determined mastery.</p>
-                <div class="steps-container">
-                    <div class="step-box"><span class="step-letter">T</span>THINK</div>
-                    <div class="step-box"><span class="step-letter">A</span>ASK</div>
-                    <div class="step-box"><span class="step-letter">K</span>KNOW</div>
-                    <div class="step-box"><span class="step-letter">E</span>ENGAGE</div>
-                    <div class="step-box"><span class="step-letter">C</span>CONFIRM</div>
-                    <div class="step-box"><span class="step-letter">A</span>ASSESS</div>
-                    <div class="step-box"><span class="step-letter">R</span>REFLECT</div>
-                    <div class="step-box"><span class="step-letter">E</span>EVALUATE</div>
+            <h2>The Continuous Mastery Cycle</h2>
+            <p class="sub-h">Meaningful learning is a behavioral habit built through iterative, autonomous self-regulation.</p>
+            
+            <div class="steps-container">
+                <div class="step-box">
+                    <span class="step-letter">P</span>
+                    PLAN
+                    <p style="font-size: 0.85rem; font-weight: 300; opacity: 0.8; margin-top: 8px; color: var(--white);">
+                        Convert weekly goals into actionable, personalized milestones using our in-house PWA calendar.
+                    </p>
+                </div>
+                
+                <div class="step-box">
+                    <span class="step-letter">L</span>
+                    LEARN
+                    <p style="font-size: 0.85rem; font-weight: 300; opacity: 0.8; margin-top: 8px; color: var(--white);">
+                        Explore concepts through visual mind mapping, picture books, interactive lessons, and guided tasks.
+                    </p>
+                </div>
+                
+                <div class="step-box">
+                    <span class="step-letter">A</span>
+                    ASSESS
+                    <p style="font-size: 0.85rem; font-weight: 300; opacity: 0.8; margin-top: 8px; color: var(--white);">
+                        Shift from external deadlines to learner readiness with formative assessments that act as tools for growth.
+                    </p>
+                </div>
+                
+                <div class="step-box">
+                    <span class="step-letter">R</span>
+                    REFLECT
+                    <p style="font-size: 0.85rem; font-weight: 300; opacity: 0.8; margin-top: 8px; color: var(--white);">
+                        Evaluate progress, recognize structural blind spots, and grow tracking metrics via the Transparency Hub.
+                    </p>
+                </div>
+                
+                <div class="step-box">
+                    <span class="step-letter">I</span>
+                    IMPROVE
+                    <p style="font-size: 0.85rem; font-weight: 300; opacity: 0.8; margin-top: 8px; color: var(--white);">
+                        Revisit concepts through targeted reinforcements and map expansion via comparative learning snapshots.
+                    </p>
                 </div>
             </div>
         </section>
-
-        <section class="enablement-cta">
+       <section class="enablement-cta" style="padding: 60px 0; background: #000; color: var(--white);">
             <div class="container">
-                <h2>Institutional Enablement</h2>
-                <p class="enablement-p">
-                    We empower schools and parents with the analytics required to support student autonomy without micro-management.
+                <!-- Section Header -->
+                <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2;">
+                    Institutional Enablement
+                </h2>
+                <p class="enablement-p" style="text-align: center; font-size: 1.1rem; font-weight: 300; line-height: 1.7; opacity: 0.85; max-width: 750px; margin: 0 auto 50px;">
+                    We empower schools and parents with the non-intrusive analytics required to foster student autonomy, replacing stress-inducing micro-management with real-time insight.
                 </p>
                 
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h4>Self-Driven Analytics</h4>
-                        <p>Observe exactly how students navigate structural blocks and build structural autonomous habits over time.</p>
+                <!-- Two-Fold Promise Grid -->
+                <div class="feature-grid" style="display: flex; flex-wrap: wrap; gap: 30px; align-items: stretch;">
+                    
+                    <!-- COLUMN 1: Companionship to Learners -->
+                    <div style="flex: 1; min-width: 320px; background: linear-gradient(145deg, rgba(255,255,255,0.01), rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid var(--pink); border-radius: 12px; padding: 40px 30px;">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">🤝</div>
+                        <h3 style="color: var(--pink); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; letter-spacing: 0.5px;">Companionship to Learners</h3>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; font-weight: 300;">
+                            Learning shouldn't feel like an isolating series of deadlines. We provide an empathetic partnership, transforming hesitation into absolute self-confidence.
+                        </p>
+                        
+                        <!-- Learner Features Stack -->
+                        <div style="display: flex; flex-direction: column; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">🧠 Human Insight & Mentorship</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Maps out dynamic profiles—individual likes, dislikes, strengths, and unique behavioral challenges.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">📅 Self-Regulated Planning</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Our interactive PWA hub lets students schedule, track, and re-allocate tasks to build intrinsic time management.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">🔄 Adaptive Growth Cycles</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Encourages voluntary formative assessment checks triggered purely by learner readiness rather than rigid mandates.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4>Friction Identification</h4>
-                        <p>Pinpoint localized zones where learner autonomy stalls to deliver concise, non-intrusive support metrics.</p>
+        
+                    <!-- COLUMN 2: Assistance to Educators -->
+                    <div style="flex: 1; min-width: 320px; background: linear-gradient(145deg, rgba(255,255,255,0.01), rgba(255,255,255,0.03)); border: 1px solid rgba(255,255,255,0.08); border-top: 4px solid var(--cyan); border-radius: 12px; padding: 40px 30px;">
+                        <div style="font-size: 2.5rem; margin-bottom: 15px;">🛠️</div>
+                        <h3 style="color: var(--cyan); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; letter-spacing: 0.5px;">Assistance to Educators</h3>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; font-weight: 300;">
+                            We alleviate administrative stress on schools and teachers, automating diagnostic tracking and offering real-time actionable intelligence.
+                        </p>
+                        
+                        <!-- Educator/Parent Analytics Stack -->
+                        <div style="display: flex; flex-direction: column; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">📊 Comparative Snapshots</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Isolates true conceptual mastery and dynamic confidence indices over punitive percentage scores.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">🔍 Friction Identification</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Pinpoints exact structural blocks where learner autonomy stalls to enable precise, localized support.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 1.05rem; margin-bottom: 5px; color: var(--white);">🌐 Transparency Hub</h4>
+                                <p style="color: rgba(255,255,255,0.65); font-size: 0.88rem; line-height: 1.5; margin: 0;">
+                                    Unified tracking dashboards for parents and school leadership to follow transitional academic lifecycles.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4>Transparency Hub</h4>
-                        <p>Unified data dashboard ecosystems for parents and educators to track transitional academic lifecycle indicators.</p>
-                    </div>
+        
                 </div>
-
+    
                 <div class="cta-action-row">
                     <a href="javascript:void(0)" onclick="openModal()" class="btn-demo">Request Institutional Demo</a>
                 </div>
